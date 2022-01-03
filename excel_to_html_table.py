@@ -30,8 +30,6 @@ def parse_row(ws, row, header=False):
 def parse_to_html_table(file, sheet, header):
     wb = pyxl.load_workbook(file)
     ws = wb[sheet]
-    print(ws.max_row)
-    print(ws.max_column)
 
     with open('out.html', 'w') as html_file:
         html_file.write("<table>\n")
